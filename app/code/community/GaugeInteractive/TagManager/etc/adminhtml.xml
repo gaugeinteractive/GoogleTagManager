@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+  <acl>
+    <resources>
+      <admin>
+        <children>
+          <system>
+            <children>
+              <config>
+                <children>
+                  <tagmanager_options translate="title" module="tagmanager">
+                    <title>Google Tag Manager</title>
+                  </tagmanager_options>
+                </children>
+              </config>
+            </children>
+          </system>
+        </children>
+      </admin>
+    </resources>
+  </acl>
+</config>

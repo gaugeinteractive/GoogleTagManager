@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <GaugeInteractive_TagManager>
+      <version>0.1.0</version>
+    </GaugeInteractive_TagManager>
+  </modules>
+
+  <global>
+    <helpers>
+      <tagmanager>
+        <class>GaugeInteractive_TagManager_Helper</class>
+      </tagmanager>
+    </helpers>  
+
+    <models>
+      <tagmanager>
+        <class>GaugeInteractive_TagManager_Model</class>
+      </tagmanager>
+    </models>
+  </global>
+
+  <frontend>
+    <layout>
+      <updates>
+        <tagmanager>
+          <file>gaugeinteractive_tagmanager.xml</file>
+        </tagmanager>
+      </updates>
+    </layout>
+  </frontend>
+</config>
