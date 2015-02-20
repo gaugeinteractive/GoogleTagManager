@@ -8,9 +8,9 @@
             <children>
               <config>
                 <children>
-                  <tagmanager translate="title" module="tagmanager">
+                  <google translate="title" module="googletagmanager">
                     <title>Google Tag Manager</title>
-                  </tagmanager>
+                  </google>
                 </children>
               </config>
             </children>

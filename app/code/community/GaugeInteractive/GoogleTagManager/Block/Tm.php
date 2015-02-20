@@ -1,5 +1,11 @@
 <?php
-class GaugeInteractive_TagManager_Block_TagManager extends Mage_Core_Block_Template
+/**
+ * GoogleTagManager block
+ *
+ * @category   GaugeInteractive
+ * @package    GaugeInteractive_GoogleTagManager
+ */
+class GaugeInteractive_GoogleTagManager_Block_Tm extends Mage_Core_Block_Template
 {
     /**
      * Get Google Tag Manager container ID
@@ -8,7 +14,7 @@ class GaugeInteractive_TagManager_Block_TagManager extends Mage_Core_Block_Templ
      */
     public function getContainerId()
     {
-        return Mage::helper('tagmanager')->getContainerId();
+        return Mage::helper('googletagmanager')->getContainerId();
     }
 
     /**
@@ -18,7 +24,7 @@ class GaugeInteractive_TagManager_Block_TagManager extends Mage_Core_Block_Templ
      */
     protected function _toHtml()
     {
-        if (!Mage::helper('tagmanager')->isGoogleTagManagerAvailable()) {
+        if (!Mage::helper('googletagmanager')->isGoogleTagManagerAvailable()) {
             return '';
         }
         return parent::_toHtml();

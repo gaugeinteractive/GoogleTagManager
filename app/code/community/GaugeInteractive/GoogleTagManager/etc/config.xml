@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <GaugeInteractive_GoogleTagManager>
+      <version>1.0.0</version>
+    </GaugeInteractive_GoogleTagManager>
+  </modules>
+
+  <global>
+    <blocks>
+      <googletagmanager>
+          <class>GaugeInteractive_GoogleTagManager_Block</class>
+      </googletagmanager>
+    </blocks>
+
+    <helpers>
+      <googletagmanager>
+        <class>GaugeInteractive_GoogleTagManager_Helper</class>
+      </googletagmanager>
+    </helpers>
+  </global>
+
+  <frontend>
+    <layout>
+      <updates>
+        <googletagmanager>
+          <file>gaugeinteractive_googletagmanager.xml</file>
+        </googletagmanager>
+      </updates>
+    </layout>
+  </frontend>
+</config>

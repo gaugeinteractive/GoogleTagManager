@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <GaugeInteractive_TagManager>
+        <GaugeInteractive_GoogleTagManager>
             <active>true</active>
             <codePool>community</codePool>
-        </GaugeInteractive_TagManager>
+        </GaugeInteractive_GoogleTagManager>
     </modules>
 </config>

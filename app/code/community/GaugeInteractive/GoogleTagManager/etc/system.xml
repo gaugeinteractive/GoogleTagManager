@@ -1,25 +1,12 @@
 <?xml version="1.0"?>
 <config>
-  <tabs>
-    <tagmanager translate="label" module="tagmanager">
-      <label>Google Tag Manager</label>
-      <sort_order>9999</sort_order>
-    </tagmanager>
-  </tabs>
   <sections>
-    <tagmanager translate="label" module="tagmanager">
-      <label>Tag Manager</label>
-      <tab>tagmanager</tab>
-      <frontend_type>text</frontend_type>
-      <sort_order>1000</sort_order>
-      <show_in_default>1</show_in_default>
-      <show_in_website>1</show_in_website>
-      <show_in_store>1</show_in_store>
+    <google>
       <groups>
-        <tagmanager translate="label">
+        <tagmanager translate="label" module="googletagmanager">
           <label>Tag Manager</label>
           <frontend_type>text</frontend_type>
-          <sort_order>1</sort_order>
+          <sort_order>20</sort_order>
           <show_in_default>1</show_in_default>
           <show_in_website>1</show_in_website>
           <show_in_store>1</show_in_store>
@@ -44,6 +31,6 @@
           </fields>
         </tagmanager>
       </groups>
-    </tagmanager>
+    </google>
   </sections>
 </config>
