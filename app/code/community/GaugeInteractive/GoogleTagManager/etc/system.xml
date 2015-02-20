@@ -4,7 +4,7 @@
     <google>
       <groups>
         <tagmanager translate="label" module="googletagmanager">
-          <label>Tag Manager</label>
+          <label>Google Tag Manager</label>
           <frontend_type>text</frontend_type>
           <sort_order>20</sort_order>
           <show_in_default>1</show_in_default>
