@@ -5,4 +5,10 @@
             <block type="googletagmanager/tm" name="google_tagmanager" as="google_tagmanager" template="googletagmanager/tm.phtml" />
         </reference>
     </default>
+
+    <checkout_onepage_success>
+        <reference name="after_body_start">
+            <block type="googletagmanager/tracking" name="google_tagmanager_tracking" before="google_tagmanager" template="googletagmanager/tracking.phtml"/>
+        </reference>
+    </checkout_onepage_success>
 </layout>
