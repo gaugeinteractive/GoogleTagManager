@@ -34,12 +34,12 @@ class GaugeInteractive_GoogleTagManager_Block_Tracking extends Mage_Checkout_Blo
         $js_items = array();
         foreach ($order->getAllVisibleItems() as $item) {
             $js_items[] = sprintf("{
-'sku': '%s',
-'name': '%s',
-'category': '%s',
-'price': '%s',
-'quantity': '%s'
-}",
+                'sku': '%s',
+                'name': '%s',
+                'category': '%s',
+                'price': '%s',
+                'quantity': '%s'
+                }",
                 $this->jsQuoteEscape($item->getSku()),
                 $this->jsQuoteEscape($item->getName()),
                 null, // Optional
@@ -48,21 +48,21 @@ class GaugeInteractive_GoogleTagManager_Block_Tracking extends Mage_Checkout_Blo
             );
         }
 
-        $result = sprintf("dataLayer = [{
-'transactionId': '%s',
-'transactionAffiliation': '%s',
-'transactionTotal': '%s',
-'transactionTax': '%s',
-'transactionShipping': '%s',
-'transactionProducts': [%s]
-}];",
-                $orderId,
-                $this->jsQuoteEscape(Mage::app()->getStore()->getFrontendName()),
-                $order->getBaseGrandTotal(),
-                $order->getBaseTaxAmount(),
-                $order->getBaseShippingAmount(),
-                implode(", ", $js_items)
-            );
+        $result = sprintf("dataLayer.push({
+            'transactionId': '%s',
+            'transactionAffiliation': '%s',
+            'transactionTotal': '%s',
+            'transactionTax': '%s',
+            'transactionShipping': '%s',
+            'transactionProducts': [%s]
+            });",
+            $orderId,
+            $this->jsQuoteEscape(Mage::app()->getStore()->getFrontendName()),
+            $order->getBaseGrandTotal(),
+            $order->getBaseTaxAmount(),
+            $order->getBaseShippingAmount(),
+            implode(", ", $js_items)
+        );
 
         return $result;
 

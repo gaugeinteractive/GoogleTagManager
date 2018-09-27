@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
     <default>
+        <reference name="head">
+            <block type="core/template" name="google_tagmanager_datalayer" as="google_tagmanager_datalayer" before="-" template="googletagmanager/datalayer.phtml"/>
+        </reference>
         <reference name="after_body_start">
             <block type="googletagmanager/tm" name="google_tagmanager" as="google_tagmanager" template="googletagmanager/tm.phtml" />
         </reference>
